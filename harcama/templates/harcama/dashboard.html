@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+<ul>
+{% for h in harcamalar %}
+    <li>{{ h.date }} - {{ h.description }}: {{ h.amount }} TL ({{ h.category }})</li>
+{% empty %}
+    <li>Hiç harcama yok</li>
+{% endfor %}
+</ul>
+<a href="{% url 'harcama_ekle' %}">Yeni Harcama Ekle</a>
